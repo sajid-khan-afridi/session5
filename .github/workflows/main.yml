@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI= false
+name: CI
 
 # Controls when the action will run. 
 on:
@@ -23,7 +23,7 @@ jobs:
         cmd: install
         
     - name: creating build
-      run: yarn build
+      run: CI=false npm run build 
       
     - name: installing surge
       run: npm install -g surge
